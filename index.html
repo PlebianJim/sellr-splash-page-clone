@@ -16,20 +16,24 @@
 
 <body>
     <div id="mySideNav" class="sideNav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
-        <h2>Request a Callback</h2>
-        <p>Enter your details below to get a callback from one of our expert memebers of staff. We'll asnwer any
-            questions you may have</p>
-        <p>* Please note: all fields are required</p>
-        <form id="callback-form" action="https://httpbin.org/post" method="post">
-            <label for="name">Name</label>
-            <input type="text" id="name">
-            <label for="phone-number">Telephone Number</label>
-            <input type="number" id="phone-number">
-            <label for="email">Email address</label>
-            <input type="email" id="email">
-            <div class="g-recaptcha" data-sitekey="6LdR0k4pAAAAAFMHMVKHjDyIiiEUg9pvTCEHJe7n"></div>
-        </form>
+        <div class="sideNav-container">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: white;">&times</a>
+            <h2 class="sideNav-h2">Request a Callback</h2><br>
+            <p class="sideNav-p">Enter your details below to get a callback from one of our expert memebers of staff.
+                We'll asnwer any
+                questions you may have</p><br>
+            <p class="sideNav-p" style="font-style: italic;">* Please note: all fields are required</p><br>
+            <form id="callback-form" action="https://httpbin.org/post" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name"><br>
+                <label for="phone-number">Telephone Number</label>
+                <input type="number" id="phone-number"><br>
+                <label for="email">Email address</label>
+                <input type="email" id="email"><br>
+                <div class="g-recaptcha" data-sitekey="6LdR0k4pAAAAAFMHMVKHjDyIiiEUg9pvTCEHJe7n"></div><br>
+                <button>Immediate Callback</button>
+            </form>
+        </div>
     </div>
     <section id="header-section">
         <header class="header-sc001">
@@ -38,7 +42,7 @@
             </div>
             <div class="header-sc001-right">
                 <p class="header-sc001-p">Call us now on 0330 179179 or</p>
-                <button class="header-sc001-button" onclick="openNav()">Request a callback</button>
+                <button id="openNav" class="header-sc001-button" onclick="openNav()">Request a callback</button>
             </div>
         </header>
     </section>
