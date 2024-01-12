@@ -8,11 +8,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <title>Splash Page Clone</title>
 </head>
 
 <body>
+    <div id="mySideNav" class="sideNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
+        <h2>Request a Callback</h2>
+        <p>Enter your details below to get a callback from one of our expert memebers of staff. We'll asnwer any
+            questions you may have</p>
+        <p>* Please note: all fields are required</p>
+        <form id="callback-form" action="https://httpbin.org/post" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+            <label for="phone-number">Telephone Number</label>
+            <input type="number" id="phone-number">
+            <label for="email">Email address</label>
+            <input type="email" id="email">
+            <div class="g-recaptcha" data-sitekey="6LdR0k4pAAAAAFMHMVKHjDyIiiEUg9pvTCEHJe7n"></div>
+        </form>
+    </div>
     <section id="header-section">
         <header class="header-sc001">
             <div class="header-sc001-left">
@@ -20,7 +38,7 @@
             </div>
             <div class="header-sc001-right">
                 <p class="header-sc001-p">Call us now on 0330 179179 or</p>
-                <button class="header-sc001-button">Request a callback</button>
+                <button class="header-sc001-button" onclick="openNav()">Request a callback</button>
             </div>
         </header>
     </section>
