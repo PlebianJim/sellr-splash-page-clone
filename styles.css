@@ -522,6 +522,11 @@ footer {
     gap: 1px;
   }
 
+  .grid > a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
   .cell {
     background-color: white;
     color: #787b86;
